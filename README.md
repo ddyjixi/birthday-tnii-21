@@ -1,39 +1,65 @@
-# TNii’s Retro Birthday Scrapbook 🎂
+# Birthday Scrapbook 🎂📸
 
-Website chúc sinh nhật tương tác, chạy bằng HTML/CSS/JavaScript thuần. Không cần npm, backend, database, tài khoản hay API key.
+A small, interactive birthday website inspired by a **retro scrapbook** — a collection of little memories, warm wishes, and playful surprises.
 
-## Xem web trên máy
-Mở `index.html` trong Chrome/Edge/Firefox. Hoặc sử dụng VS Code + Live Server.
+Built with **HTML, CSS, and vanilla JavaScript**, with no backend or build step required.
 
-## Phiên bản dành cho Thủy Nhi (TNii)
-- Ngày sinh: 15/10/2005; sinh nhật 21 tuổi: 15/10/2026.
-- Cung hoàng đạo theo ngày sinh: Thiên Bình ♎.
-- Hãy thay chữ ký người gửi và thêm ảnh kỷ niệm thật trước khi gửi.
+## Features
 
-## Thay nội dung
-Mở `index.html`, tìm `const CONFIG = {` gần cuối file:
-- `recipient`: tên người được chúc
-- `sender`: tên bạn
-- `letter`: toàn bộ nội dung bức thư; giữ dấu backtick bao quanh
-- `photos`: sửa `title`, `description`, `photo` cho 3 kỷ niệm
-- `gifts`: 3 câu trả lời khi mở quà
+- Vintage scrapbook layout with responsive Polaroid photo cards
+- Click-to-view photo gallery and captions
+- Interactive letter with an envelope-opening animation
+- Birthday cake, candle interaction, and confetti
+- Surprise gift cards
+- Background music (subject to browser autoplay restrictions)
+- Mobile-friendly design
 
-## Thêm ảnh
-1. Tạo thư mục `photos` cạnh `index.html`.
-2. Chép ảnh vào thư mục, ví dụ `photos/anh-1.jpg`.
-3. Sửa `photo:''` thành `photo:'photos/anh-1.jpg'` ở ảnh tương ứng.
-4. Nên nén ảnh dưới 1 MB mỗi tấm để tải nhanh trên điện thoại.
+## Project structure
 
-## Đưa lên mạng miễn phí (Netlify Drop)
-1. Vào https://app.netlify.com/drop
-2. Kéo cả thư mục `retro-birthday` (chứa `index.html` và `photos`, nếu có) vào vùng upload.
-3. Lấy URL `*.netlify.app` được tạo và gửi bạn thân.
-4. Khi chỉnh web, deploy thư mục lại. Tính năng và hạn mức gói miễn phí có thể thay đổi theo Netlify.
+```text
+.
+├── index.html          # Website layout, styles, scripts, and content
+├── photos/             # Gallery images
+│   ├── anh1.png
+│   ├── anh2.png
+│   └── anh3.png
+└── music/
+    └── birthday.mp3    # Background music
+```
 
-## GitHub Pages
-Đưa `index.html` và `photos/` vào một repository, vào Settings → Pages, chọn deploy từ nhánh `main`/root. Web sẽ có URL dạng `https://username.github.io/repository/`.
+The filenames above reflect the current asset paths; update the corresponding references in `index.html` if you rename them.
 
-## Lưu ý
-- Nội dung được lưu trên web công khai, đừng dùng ảnh hoặc lời nhắn riêng tư nếu chưa được đồng ý.
-- Trang dùng Google Fonts; khi không có mạng font sẽ tự thay bằng font sẵn có.
-- Không có nhạc tự phát, mic hay quyền truy cập thiết bị. Thổi nến bằng nút chạm, chạy được trên điện thoại.
+## Run locally
+
+Open `index.html` in a browser. For a closer-to-production test, run it through a local development server (for example, VS Code Live Server).
+
+## Deploy to Netlify
+
+This is a static website and can be deployed for free on [Netlify](https://www.netlify.com/).
+
+### First deployment
+
+1. Sign in to [Netlify](https://app.netlify.com/).
+2. Open [Netlify Drop](https://app.netlify.com/drop), or create a new project with manual deployment.
+3. Drag and drop the **project folder containing `index.html`** (not a ZIP file).
+4. Wait for the deploy to finish and open the assigned `.netlify.app` URL.
+
+### Update an existing published website
+
+1. Edit `index.html` and/or replace assets inside `photos/` and `music/`.
+2. Test the site locally and save all changes.
+3. In Netlify, open **Projects → your existing project → Deploys**.
+4. Use the manual deploy drag-and-drop area to upload the **entire updated project folder**.
+5. Wait for the new deploy to be marked **Published** and refresh the existing website URL.
+
+**Important:** Update through the existing project's **Deploys** page to keep the same URL. Do not create a new project just to publish changes. If the site is connected to a Git repository with automatic deployments enabled, push changes to its configured deployment branch instead.
+
+## Customization
+
+Edit the `CONFIG` object inside `index.html` to change captions, messages, gallery paths, and gift text. The audio source is configured separately in the HTML. Keep image and audio filenames consistent with their paths.
+
+> **Privacy:** This repository's README intentionally omits personal details. If you publish the repository or Netlify site publicly, any names, messages, photos, and audio **inside the website files** may still be accessible. Review those files and use only media you have permission to share.
+
+---
+
+Made with care, a little nostalgia, and lots of confetti. ♡
